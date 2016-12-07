@@ -1,0 +1,414 @@
+*{margin: 0;padding: 0;}
+body{font-family: "微软雅黑";}
+
+.fl{float: left;}
+.fr{float: right;}
+p{font-size: 3vmin;margin:0 0 0.1em 0;margin-top:0;}
+.section{max-width: 100%; max-height: 100%;}
+p,h6{letter-spacing:0.5vmin;}
+ul li {list-style: none;}
+a{text-decoration: none;}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.wrap{width:80%; height:auto !important; margin: 0 auto;}
+
+/*-------------------------------首页------------------------------------*/
+.head{
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+.head h3{font-size:7vmin;  }
+
+#logo{
+    width:200px;
+    height:200px;
+    border:10px solid #cccccc;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -o-border-radius:50%;
+    border-radius:50%
+}
+/*-------------------专业能力标题-----------------------------*/
+h4.title {
+    font-size: 3vmin;
+    margin-bottom: 1em;
+    text-align: center;
+    line-height: 1.1;
+    color: #CC3366;
+}
+h4.title span {
+    display: block;     /*设置为块级元素会独占一行形成上下居中的效果*/
+    color: #212121;
+    position: relative;   /*定位横线（当横线的父元素）*/
+}
+
+h4.title span:before, h4.title span:after {
+    content: '';                 /*CSS伪类用法*/
+    position: absolute;         /*定位背景横线的位置*/
+    top: 50%;
+    background: #151515;       /*宽和高做出来的背景横线*/
+    width: 15%;
+    height: 2px;
+}
+
+h4.title span:before{
+    left: 10%;
+}
+h4.title span:after {
+    right: 10%;
+}
+
+/*-----------------专业能力内容---------------------------------*/
+.section:nth-child(2) {
+    background: #4999ef; /* Old browsers */
+    background: -moz-linear-gradient(left, #4999ef 0%, #2B7DAD 50%, #222222 0%, #222222 100%);
+    background: -webkit-linear-gradient(left, #4999ef 0%, #2B7DAD 50%, #222222 0%, #222222 100%);
+    background: linear-gradient(to right, #4999ef 0%, #2B7DAD 50%, #222222 0%, #222222 100%);
+    /*filter: progid:DXImageTransform.Microsoft.gradient*/
+    /*( startColorstr='#4999ef', endColorstr='#1e5ddc',GradientType=1 );*/
+}
+
+.container p{
+    float: left;
+    width: 10%;
+    font-size: 5vmin;
+}
+/*专业技能大DIV包裹层*/
+.content{
+    width: 100%;
+    height: auto;
+}
+/*左边div外层*/
+.box-fl{
+    width: 56vmin;
+    /*height: 58vmin;*/
+    max-width: 100%;
+    max-height: 100%;
+    border: 0.6vmin solid #ffffff;
+    margin-left: 20%;
+    float: left;
+    margin-top: 1%;
+}
+/*内容外层div、*/
+.box{
+    width: 53vmin;
+    height: 16vmin;
+    margin-top: 3%;
+}
+/*左边logo*/
+.box .img{
+    float: left;
+    width: 5vmin;
+    height: 5vmin;
+    border: 0.6vmin solid #ffffff;
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    left: 5%;
+    top: 10%;
+    margin-top: 10%;
+    background: #ffffff;
+}
+.content .img h5{
+    font-size: 4vmin;
+    text-align: center;
+    line-height: 5vmin;
+    color: #7F5959;
+}
+/*/!*内容包裹层*!/*/
+.content .box-cont{
+    width: 39vmin;
+    height: 17.5vmin;
+    margin: 2% 5% 3% 5%;
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+    float: right;
+}
+
+.content .box p{
+    font-size: 2.05vmin;
+    display: block;
+    color: #ffffff;
+    font-weight: 500;
+    margin-top:1%;
+
+}
+.content .box h6{
+    font-size: 3vmin;
+    text-shadow: 0.5vmin 0.5vmin 0.5vmin #7F7F7F;
+    color: #ffffff;
+}
+
+/*右边*/
+.box-fr{
+    width: 380px;
+    height: 350px;
+    margin-left: 3%;
+    float: right;
+    margin-top: 3%;
+}
+/*---------------------------------工作经验----------------------------*/
+
+.experience{
+    width: 100%;
+    background: url("../images/bg.jpg") center no-repeat;
+    background-size: 100% 100%;
+}
+.bg-gz{
+    width: 100%;
+    height: auto;
+    background: rgba(0,0,0,0.8);
+    /*color: #636778;*/
+    padding: 3% 0 3% 0%;
+
+}
+
+.row-cont h6{
+    color: #245269;
+    font-size: 3vmin;
+}
+/*内容外层div*/
+.row{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-left: 20%;
+    z-index: 5;
+
+}
+.row-cont{
+    width: 35%;
+    height: 50%;
+    background: rgba(206,214,249,0.8);
+    text-align: left;
+    position: relative;
+    top: 0;
+    margin: 2% 5% 2% 8%;
+    padding: 2%;
+}
+/*-------------------------------项目经验-------------------------------*/
+.grid {
+    position: relative;
+    clear: both;
+    margin: 0 auto;
+    /*padding: 1em 0 4em;*/
+    max-width: 1000px;
+    list-style: none;
+    text-align: center;
+    left: 2%;
+}
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 180px;
+    max-width: 280px;
+    max-height: 210px;
+    width: 48%;
+    height: auto;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+}
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+.grid figure figcaption {
+    /*padding: 1em;*/
+    color: #fff;
+    text-transform: uppercase;
+    font-size:2vmin;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+.grid figure h2 {
+    word-spacing: -0.10em;
+    font-weight: 300;
+}
+
+.grid figure h2 span {
+    font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+/*-----------------*/
+/***** Phoebe *****/
+/*-----------------*/
+
+figure.box-shadow {
+    background: #000000;
+}
+figure.box-shadow:hover img {
+    opacity: 0.6;
+}
+figure.box-shadow figcaption::before {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/method.svg) no-repeat center center;
+    background-size: 100% 100%;
+    content: '';
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.25s, transform 0.25s;
+    -webkit-transform: scale3d(5,2.5,1);
+    transform: scale3d(5,2.5,1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+figure.box-shadow:hover figcaption::before {
+    opacity: 0.4;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+figure.box-shadow h2 {
+    margin-top: 1em;
+    -webkit-transition: transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,40px,0);
+    transform: translate3d(0,40px,0);
+}
+figure.box-shadow:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+figure.box-shadow p a {
+    color: #fff;
+    font-size: 140%;
+    opacity: 0;
+    position: relative;
+    display: inline-block;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+figure.box-shadow p a:first-child {
+    -webkit-transform: translate3d(-60px,-60px,0);
+    transform: translate3d(-60px,-60px,0);
+}
+
+figure.box-shadow p a:nth-child(2) {
+    -webkit-transform: translate3d(0,60px,0);
+    transform: translate3d(0,60px,0);
+}
+
+figure.box-shadow p a:nth-child(3) {
+    -webkit-transform: translate3d(60px,-60px,0);
+    transform: translate3d(60px,-60px,0);
+}
+
+figure.box-shadow:hover p a {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+@media screen and (max-width: 50em) {
+    .content {
+        padding: 0 10px;
+        text-align: center;
+    }
+    .grid figure {
+        display: inline-block;
+        float: none;
+        margin: 10px auto;
+        width: 100%;
+    }
+}
+
+/*--------------------------毕业学校--------------*/
+
+/*--------------------自我评价---------------*/
+.section:nth-child(5){
+    width: 100%;
+    height:100%;
+    background: url("../images/me4.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.me-fr{
+    width: 100%;
+    height: 100%;
+    background: rgba(34,34,34,0.9);
+    position: relative;
+}
+.me-content{
+    width: 14em;
+    height: 65%;
+    display: block;
+    background: rgba(55,139,186,0.5);
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    z-index: 10;
+}
+.bot-content{
+    z-index: 11;
+    position: absolute;
+    left: 28%;
+    top: 30%;
+    border: 0.139em solid #ffffff;
+    width: 55vmin;
+    height: 7.2em;
+    text-align: center;
+}
+.bot-content h6{
+    margin: 5% 15% 5% 15%;
+    font-size: 3vmin;
+    text-align: left;
+}
+.bot-content p{
+    border-bottom: 0.3vmin dotted #7F7F7F;
+    margin: 5% 15% 5% 15%;
+    font-size: 2vmin;
+    text-align: left;
+}
+
+
