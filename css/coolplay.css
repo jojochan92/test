@@ -1,0 +1,106 @@
+
+/*背景颜色*/
+#coolplay {margin-top: 50px;}
+#coolplay #first-large{padding-bottom: 25px;}
+#coolplay #first-large{background-color: #f7f7f7;width: 100%;}
+
+/*里面小块的背景颜色白色*/
+#coolplay #news>div>div {background-color: #ffffff;}
+#coolplay #hotst>div>div {background-color: #ffffff;}
+#coolplay #classt>div>div {  margin-left: 0px;margin-right: 0px;}
+#coolplay #classt>div {background-color: #ffffff;}
+
+
+#coolplay #container-first-li{margin-left: 28%;}
+#coolplay #container-first-li a:hover{color: #ff0000;}
+#coolplay #container-second-li a:hover{color: #ff0000;}
+#coolplay #container-third-li a:hover{color: #ff0000;}
+
+#coolplay #container-first-li a:hover li{border-bottom: solid 2px #ff0000;}
+#coolplay #container-second-li a:hover li{border-bottom: solid 2px #ff0000;}
+#coolplay #container-third-li a:hover li{border-bottom: solid 2px #ff0000;}
+
+#coolplay #container-first-li a{color: #a7a6a4;}
+#coolplay #container-second-li a{color: #a7a6a4;}
+#coolplay #container-third-li a{color: #a7a6a4;}
+#coolplay #container-first-li {width: 168px; text-align: center;}
+#coolplay #container-second-li {width: 168px;text-align: center;}
+#coolplay #container-third-li {width: 168px;text-align: center;}
+
+#coolplay .col-md-3{
+    margin-top: 30px;margin-right:17px;margin-left:17px;width: 22%;
+    padding: 0px 0px;border-radius: 8px;
+    }
+#coolplay .col-md-3 a:nth-child(2){color: #000000;}
+#coolplay .col-md-3 a:nth-child(3){color: #999f9f;}
+#coolplay .col-md-3 a:nth-child(4){color: #ff0000;}
+#coolplay .col-md-3 a:nth-child(5){color: #c9c4c0;margin-left: 59%;width: 30px}
+#coolplay .col-md-3 a:nth-child(6){color: #c9c4c0;width: 30px;}
+
+
+#coolplay .thumbnail {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 0px 0px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+#coolplay .thumbnail > img, .thumbnail a > img {
+    margin-right:0px;
+    margin-left: 0px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+/*产品模块滑动上去边框阴影效果*/
+#coolplay #news>div>div:hover{box-shadow: 0px 0px 15px #bababa;}
+#coolplay #hotst>div>div:hover{box-shadow: 0px 0px 15px #bababa;}
+
+/*阴影过渡效果*/
+#coolplay .row>div img:hover{
+       /* Safari and Chrome */
+    -webkit-animation:mymove 2s;
+    -webkit-animation-iteration-count:300;
+    transition: height;
+}
+
+@-webkit-keyframes mymove
+{
+    /* Safari and Chrome */
+    0%   {background:white;opacity:1.0;}
+    100% {background:white;opacity: 0.2;}
+
+}
+
+#coolplay a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+    border-color:#e9e9e9;
+}
+
+#coolplay #classt a{color: #96a095;}
+#coolplay #classt  #hblack a{color: #000000;}
+#coolplay #classt  #hblack div:nth-child(2){margin-left: 27px;}
+#coolplay #classt .row div{margin-bottom: 15px;margin-top: 15px;}
+
+#coolplay #life{border: solid 1px #eaeaea;border-radius: 4px;margin-top: 25px;}
+#coolplay #life>div:nth-child(3){border-bottom:dashed 1px #eaeaea;}
+#life #hblack div:nth-child(1){margin-top: 20px;position:absolute;
+width: 6px;height: 25px;background-color: #ff0000;}
+
+#coolplay #nursing #hblack div:nth-child(1){margin-top: 20px;position:absolute;
+    width: 6px;height: 25px;background-color: #ff0000;}
+
+#coolplay #nursing{border: solid 1px #eaeaea;border-radius: 4px;margin-top: 25px;}
+#coolplay #nursing>div:nth-child(2){border-bottom:dashed 1px #eaeaea;}
+
+
+
+
+
+
+

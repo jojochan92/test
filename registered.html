@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/headerAndfooter.css">
+    <link type="text/css" rel="stylesheet" href="css/registered.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("input[type=submit]").hover(function(){
+                $("input[type=search]").show();
+            });
+            $("#login li:nth-child(2)").click(function(){
+                $("#login-form").show();
+            });
+            $("#login-form .closed").click(function(){
+                $("#login-form").hide();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            $("input").focus(function(){
+                $(this).css("border","1px solid red");
+            });
+            $("input").blur(function(){
+                $(this).css("border","0px");
+            });
+        });
+        function checkphone(phone){
+            if(phone.validity.valueMissing){
+                phone.setCustomValidity("手机号不可以为空");
+                phone.focus();
+                phone.css("border"," 1px solid red;");
+            }else if(  phone.validity.patternMismatch){
+                phone.setCustomValidity("手机号码需要以1开头3458中的而一个为第二位 长度必须为11位");
+                phone.focus();
+                phone.css("border"," 1px solid red;");
+            }else{
+                phone.setCustomValidity("")
+            }
+        };
+        function checkDigital(Digital){
+            if(Digital.validity.valueMissing){
+                Digital.setCustomValidity("验证码不可以为空");
+                Digital.focus();
+                Digital.css("border"," 1px solid red;");
+            }else{
+                Digital.setCustomValidity("")
+            }
+        };
+        function checkrepDigital(Digital){
+            if(Digital.validity.valueMissing){
+                Digital.setCustomValidity("验证码不可以为空");
+                Digital.focus();
+                Digital.css("border"," 1px solid red;");
+            }else{
+                Digital.setCustomValidity("")
+            }
+        };
+        function checkname(name){
+            if(name.validity.valueMissing){
+                name.setCustomValidity("用户名不可以为空");
+                name.focus();
+                name.css("border"," 1px solid red;");
+            }else if(name.validity.patternMismatch){
+                name.setCustomValidity("6-8位，字母和数字组成开头不能为数字");
+                name.focus();
+                name.css("border"," 1px solid red;");
+            }else{
+                name.setCustomValidity("")
+            }
+        };
+        function checkpassword(password){
+            if(password.validity.valueMissing){
+                password.setCustomValidity("密码不可以为空");
+                password.focus();
+                password.setAttribute("border"," 1px solid red;");
+            }else if(password.validity.patternMismatch){
+                password.setCustomValidity("以字母开头，长度在6~18之间，只能包含字符、数字和下划线")
+                password.focus();
+                password.css("border"," 1px solid red;");
+            }else{
+                password.setCustomValidity("")
+            }
+        }
+        function checkreppassword(password){
+            var newpassword=document.getElementById("pasword");
+            var reppassword=document.getElementById("repasword");
+            if(password.validity.valueMissing){
+                password.setCustomValidity("密码不可以为空");
+                password.focus();
+                password.setAttribute("border"," 1px solid red;");
+            }else if(password.validity.patternMismatch){
+                if(newpassword.value==reppassword.value){
+                    password.setCustomValidity("");
+                    return;
+                }else{
+                    password.setCustomValidity("两次密码不一致")
+                    password.focus();
+                    password.css("border"," 1px solid red;");
+                }
+            }
+        }
+        var countdown=60;
+        function settime(val) {
+            if (countdown == 0) {
+                val.innerHTML="免费获取验证码";
+                countdown = 60;
+                return;
+            } else {
+                val.setAttribute("disabled", true);
+                val.innerHTML="(" + countdown + ")秒后重新发送";
+                countdown--;
+            }
+            setTimeout(function() {
+                settime(val);
+            },1000)
+        }
+
+    </script>
+</head>
+<body>
+   <header class="navbar navbar-default navbar-fixed-top" role="navigation" id="header" style="margin-bottom:0px;"> <!--navbar-fixed-top -->
+      <nav class="container">
+          <aside class="navbar-header">
+              <a href=""><img src="imgs/logonew.png"width="133" height="52"></a>
+              <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"> <!---这个是显示后面面包房的特效--->
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+          </aside>
+          <ul class="nav navbar-nav collapse navbar-collapse navbar-left">
+              <li><a href="index.html">首页</a></li>
+              <li><a href="coolplay.html">酷玩</a></li>
+              <li><a href="shopp.html">导购</a></li>
+              <li><a href="try-use.html">试用</a></li>
+              <li><a href="recent.html">报告</a></li>
+          </ul>"
+          <ul id="login" class="nav navbar-nav navbar-right">
+              <li><a href="index.html">返回首页</a></li>
+              <li style="margin-right: 15px"><a href="#">登录</a></li>
+          </ul>
+          <form action="#" class="navbar-form navbar-nav navbar-right" style="display: none">
+               <div class="form-group">
+                   <input type="search" class="form-control" placeholder="请输入你要搜索的内容和" style="display: none;">
+                   <input type="submit" class="btn btn-default btn-sm" value="">
+               </div>
+          </form>
+      </nav>
+   </header>
+   <section id="login-form">
+        <article class="container" >
+            <div class="row">
+                <span class="closed"><img src="imgs/img/closed.png"></span>
+                <form class="col-md-5 col-sm-4  col-md-push-2 form-horizontal" action="www.baidu.com" method="post" role="form">
+                     <h3 class="text-center">极果帐号登录</h3>
+
+                    <div class="form-group has-success">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="inputSuccess" placeholder="请输入用户名">
+                        </div>
+                    </div>
+                    <div class="form-group has-success">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="inputWarning"placeholder="请输入密码">
+                        </div>
+                    </div>
+                    <div class="form-group has-success">
+                        <div class="col-sm-5 col-md-2  btn btn-default" style="border: 0px;">
+                         <input type="checkbox">自动登录
+                        </div>
+                        <div class="col-sm-6 col-sm-offset-1 col-md-offset-4 col-lg-offset-4 text-center">
+                            <input type="submit" class=" btn btn-danger form-control" style="border-radius: 25px;">
+                        </div>
+                    </div>
+                    <ul class="list-unstyled list-inline">
+                        <li class="col-md-3 col-xs-4">
+                           <a class="btn btn-default" href="www.baidu.com" style="padding-left: 0px; color: #0000CC;">注册新账号</a>
+                        </li>
+                        <li class="col-md-3 col-xm-2">
+                        <a class="btn btn-default" href="" style="color: #0000CC;">忘记密码</a>
+                        </li>
+                        <li class="col-md-2 col-md-offset-2 col-md-push-1">
+                        <a class="btn btn-default" href=""><img src="imgs/img/QQ.png">QQ登录</a>
+                        </li>
+                    </ul>
+                </form>
+                <div class="wenxin col-md-3 col-md-push-3 text-center">
+                    <img src="imgs/login-wei.png" >
+                </div>
+            </div>
+        </article>
+    </section>
+   <section id="registered">
+       <article class="container">
+           <aside>
+               <span></span><a>注册极果</a>
+           </aside>
+           <form action="#" method="post">
+               <table>
+                   <tr>
+                       <td><input type="text" oninvalid="checkphone(this)" required="required" placeholder="请输入手机号" pattern="^[1][358][0-9]{9}$"></td><!--手机号必须为11位--->
+                   </tr>
+                   <tr >
+                       <td><input class="Digital" oninvalid="checkDigital(this)" type="tel" pattern="^\d{4}$"  required="required" placeholder="请输入图片校验码"><span style="border: 0px;"><img src="imgs/imgCode.jpg"></span></td>
+                   </tr>
+                   <tr>
+                       <td><input id="sDigital" oninvalid="checkrepDigital(this)" class="Digital"type="text" pattern="^\d{6}$" required="required" placeholder="请输入6位数字验证">
+                           <a class="btn btn-default btn-lg" onclick="settime(this)"/>免费获取验证码</a></td>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td><input id="name" oninvalid="checkname(this)" type="text"  required="required" placeholder="请输入用户名" pattern="^[a-zA-Z][a-zA-Z0-9]{5,7}$" ></td><!----->
+                   </tr>
+                   <tr>
+                       <td> <input id="pasword" oninvalid="checkpassword(this)" type="password"  required="required" placeholder="请输入新密码" pattern="^[A-Za-z]+[0-9]+[A-Za-z0-9]*|[0-9]+[A-Za-z]+[A-Za-z0-9]*$"></td> <!--密码必须由6-16个英文字母和数字的字符串组成！-->
+                   </tr>
+                   <tr>
+                       <td> <input id="repasword" oninvalid="checkreppassword(this)" type="password"  required="required" placeholder="确定新密码"></td>
+                   </tr>
+                   <tr>
+                       <td><input type="submit" value="立刻注册"></td>
+                   </tr>
+               </table>
+           </form>
+       </article>
+   </section>
+   <footer id="footer">
+       <article class="container clearfix">
+           <div class="row">
+               <aside class="col-md-2 col-sm-4 col-xs-6">
+                   <img src="imgs/code.png" class="img-responsive text-center">
+               </aside>
+               <aside class="col-md-2 col-sm-4 col-xs-6">
+                   <img src="imgs/logoImg.jpg" class="img-responsive">
+                   <div>全球酷玩试用导购平台酷·新奇·好玩·品质</div>
+                   <div>微信添加“JguoJguo”获取我们的服务。</div>
+               </aside>
+               <aside class="col-md-2 col-sm-4 col-xs-6">
+                   <div>
+                       <h4>免费试用</h4>
+                       <ul class="list-unstyled">
+                           <li><a href="try-flow.html">试用流程</a></li>
+                           <li><a href="">如何提高成功率</a></li>
+                       </ul>
+                   </div>
+
+               </aside>
+               <aside class="col-md-2 col-sm-4 col-xs-6 friendship">
+                   <h4>友情链接</h4>
+                   <div class="row">
+                       <ul class="list-unstyled">
+                           <li><a href="">智东西</a></li>
+                           <li><a href="">搜狐IT </a></li>
+                           <li><a href="">搜狐数码</a></li>
+                           <li><a href="">凤凰数码</a></li>
+                           <li><a href="">泡泡网</a></li>
+                           <li><a href="">ZUK社区</a></li>
+                           <li><a href="">极客公园</a></li>
+                           <li><a href="">果库</a></li>
+                       </ul>
+                       <ul class="list-unstyled" >
+                           <li><a href="">WEIBUSI</a></li>
+                           <li><a href="">腾讯科技</a></li>
+                           <li><a href="">凤凰科技</a></li>
+                           <li><a href="">PConline</a></li>
+                           <li><a href="">3W咖啡</a></li>
+                           <li><a href="">亿觅emie</a></li>
+                           <li><a href="">易迅易启玩</a></li>
+                       </ul>
+                   </div>
+               </aside>
+               <aside class="col-md-2 col-sm-4 col-xs-6">
+                   <h4>购买攻略</h4>
+                   <ul class="list-unstyled">
+                       <li><a href="">美亚海淘教程</a></li>
+                       <li><a href="">日亚海淘教程</a></li>
+                       <li><a href="">海淘转运攻略</a></li>
+                       <li><a href="">kickstarter 众筹购买攻略</a></li>
+                       <li><a href="">indiegogo 众筹购买攻略</a></li>
+                   </ul>
+               </aside>
+               <aside class="col-md-2 col-sm-4 col-xs-6">
+                   <h4>厂商合作</h4>
+                   <ul class="list-unstyled">
+                       <li><a href="">关于极果</a></li>
+                       <li><a href="mailto:BD@jiguo.com">联系我们</a></li>
+                       <li><a href="help.html">商务合作：BD@jiguo.com</a></li>
+                       <li><a href="mailto:CEO@jiguo.com">CEO邮箱：CEO@jiguo.com</a></li>
+                   </ul>
+               </aside>
+           </div>
+       </article>
+       <article><p class="text-center" style="color: white; margin-top: 25px;">&copy; 2016 极果版权所有</p></article>
+   </footer>
+</body>
+</html>

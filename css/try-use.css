@@ -1,0 +1,159 @@
+/*背景颜色*/
+
+/*里面小块的背景颜色白色*/
+#trying #container-first-li{margin-left: 28%;}
+
+#trying #container-first-li {width: 168px; text-align: center;}
+#trying #container-second-li {width: 168px;text-align: center;}
+#trying #container-third-li {width: 168px;text-align: center;}
+
+#trying .col-md-3{
+    margin-top: 30px;margin-right:17px;margin-left:17px;width: 22%;
+    padding: 0px 0px;border-radius: 8px;
+}
+
+
+
+#trying .thumbnail {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 0px 0px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+#trying .thumbnail > img, .thumbnail a > img {
+    margin-right:0px;
+    margin-left: 0px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+/*/!*调节 申请中 试玩中 已结束距离顶边距离*!/
+#trying #public>div:nth-child(1n+3),
+#trying #experience>div:nth-child(1n+3){position: absolute;
+    margin-top: -1049px;  outline: solid 1px red;}*/
+
+/*产品名字共用样式*/
+#trying #product a:nth-child(2){
+    font-weight: bold;
+    font-size: larger;color: #000000;
+}
+
+#trying #product a:nth-child(7){
+    width:100%;text-align: center;
+    display: inline-block;font-size: large;
+    margin-bottom: 5px;color: #000000;
+}
+#trying #product a:nth-child(7)>span{color: #ff0000;}
+
+/*第一,三个产品数量样式*/
+#trying #product div:nth-child(1) a:nth-child(4)
+,#trying #product div:nth-child(3) a:nth-child(4){
+    display:inline-block;
+    width: 50px;/*margin-left: 70px;*/
+    height: 24px;text-align: center;margin-left: 70px;
+    margin-top: 15px;margin-bottom: 15px;
+    color: #cbcbcb; border-radius: 5px;
+    border: solid 1px #cbcbcb;"
+}
+#trying #product div:nth-child(1) a:nth-child(5)
+,#trying #product div:nth-child(3) a:nth-child(5){
+    display:inline-block;
+    width: 50px;margin-left: 15px;
+    height: 24px;text-align: center;
+    margin-top: 15px;margin-bottom: 15px;
+    color: #cbcbcb; border-radius: 5px;
+    border: solid 1px #cbcbcb;"
+}
+#trying #product div:nth-child(1) a:nth-child(9)
+,#trying #product div:nth-child(3) a:nth-child(9){
+    width:100%;text-align: center;color: #cbcbcb;
+    display: inline-block;margin-bottom: 15px;}
+
+/*
+第二个产品数量样式
+*/
+#trying #product div:nth-child(2) a:nth-child(4){
+    display:inline-block;
+    width: 50px;margin-left: 70px;
+    height: 24px;text-align: center;
+    margin-top: 15px;margin-bottom: 15px;
+    color: #78ca66; border-radius: 5px;
+    border: solid 1px #78ca66;"
+}
+
+#trying #product div:nth-child(2) a:nth-child(5){
+    display:inline-block;
+    width: 50px;margin-left: 15px;
+    height: 24px;text-align: center;
+    margin-top: 15px;margin-bottom: 15px;
+    color: #78ca66; border-radius: 5px;
+    border: solid 1px #78ca66;"
+}
+#trying #product div:nth-child(2) a:nth-child(9){
+    width:100%;text-align: center;color: #78ca66;
+    display: inline-block;margin-bottom: 15px;}
+
+/*第四个产品数量样式*/
+#trying #product div:nth-child(4) a:nth-child(4){
+    display:inline-block;
+    width: 50px;margin-left: 70px;
+    height: 24px;text-align: center;
+    margin-top: 15px;margin-bottom: 15px;
+    color: #ff0000; border-radius: 5px;
+    border: solid 1px #ff0000;"
+}
+
+#trying #product div:nth-child(4) a:nth-child(5){
+    display:inline-block;
+    width: 50px;margin-left: 15px;
+    height: 24px;text-align: center;
+    margin-top: 15px;margin-bottom: 15px;
+    color: #ff0000; border-radius: 5px;
+    border: solid 1px #ff0000;"
+}
+#trying #product div:nth-child(4) a:nth-child(9){
+    width:100%;text-align: center;color: #ff0000;
+    display: inline-block;margin-bottom: 15px;}
+
+/*大页面背景*/
+#trying #first-large{width:100%;background-color: #f7f7f7;}
+
+/*产品小块的背景*/
+#trying #first-large #public>div>div>div,
+#trying #first-large #public>div>div>div{background-color: #ffffff;}
+
+/*导航背景*/
+#trying #public>ul{background-color: #ffffff;width: 1350px;margin-left: -106px;}
+#trying #experience>ul{background-color: #ffffff;width: 1350px;margin-left: -106px;}
+
+
+
+
+/*产品模块滑动上去边框阴影效果*/
+#trying #overed #product>div:hover{box-shadow: 0px 0px 15px #bababa;}
+/*产品模块滑动上去边框阴影效果*/
+#trying  #product>div:hover,#product>div{box-shadow: 0px 0px 15px #bababa;}
+
+/*阴影过渡效果*/
+#trying .row>div img:hover{
+    /* Safari and Chrome */
+    -webkit-animation:mymove 2s;
+    -webkit-animation-iteration-count:300;
+    transition: height;
+}
+
+@-webkit-keyframes mymove
+{
+    /* Safari and Chrome */
+    0%   {background:white;opacity:1.0;}
+    100% {background:white;opacity: 0.5;}
+
+}
+
+

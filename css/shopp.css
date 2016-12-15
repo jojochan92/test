@@ -1,0 +1,180 @@
+*{margin: 0;padding: 0;}
+body{font-family: "微软雅黑";}
+.wrap{width: 100%;height: auto; margin: 0 auto;}
+a{text-decoration: none;}
+ul li{list-style: none;}
+/*------导购清单外层包围-----*/
+#head{
+    width: 100%;
+    height: auto;
+}
+/*-----导购清单标题-------*/
+#head h1{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+#shaopContent .tab-content{
+    width: 100%;
+}
+#shaop {
+    position: relative;
+    left: 40%;
+    right:40%;
+}
+#shaop li{
+    width: 8%;
+    text-align: center;
+    margin: 0 1% 0 1%;
+}
+#shaop li:nth-child(1){
+    display: block;
+    border-bottom:  3px solid #F8572B;
+}
+#shaop li:nth-child(2):hover{
+    border-bottom:  3px solid #F8572B;
+}
+/*----------------------最新-------------------------*/
+/*----------------------最大div*/
+#new,#hot{
+    background: #F7F7F7;
+}
+/*---------------------内容外层包围*/
+#shaopContent .new1{
+    width:20%;
+    height: auto;
+    display: inline-block;
+    position: relative;
+    left: 5%;
+    background: #ffffff;
+    border-bottom: 2.3em #9d9d9d solid;
+    border-radius: 12%;
+    margin: 2% 0 0 2%;
+    border-image: url("../imgs/img/listbg.jpg")45 11 stretch;
+}
+#shaopContent .new1 img{
+    width: 100%;
+    height: auto;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+
+#shaopContent .new1 img:hover{
+    /*opacity: 0.6;*/
+    /*-webkit-transform: scale3d(1,1,1);*/
+    /*transform: scale3d(1,1,1);*/
+    /*animation:myfirst 5s*/
+    -webkit-animation: myfirst 2s infinite ease-in-out;
+}
+@-webkit-keyframes myfirst {
+    0%{
+        opacity:0.5;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+#shaopContent .new1 span{
+    width: 100%;
+    height: 80px;
+    display: inline-block;
+    overflow: hidden;
+    padding: 3% 4% 6% 4%;
+    font-size: 1.588rem;
+    color: #101010;
+    margin: 3%;
+}
+
+#shaopContent .new1 em{
+    display: inline-table;
+    width: 40px;
+    position: relative;
+    left:60% ;
+    color: #C7C0C0;
+    margin-bottom:5% ;
+}
+#shaopContent .new1 em>img {
+    width: 15px;
+    display: inline-block;
+    margin: 3%;
+}
+
+/*导购清单结束*/
+/*--------------------导购详情页*/
+#shopp-details{
+    width: 100%;
+    height: auto;
+    background: #F7F7F7;
+}
+#shopp-details p,h4,h6,h2,h5{
+    line-height: 22px;
+}
+#shopp-details h4{
+    text-align: center;
+}
+#shopp-details .container>p{
+    color:#ACADAD;
+    font-weight: bold;
+}
+#shopp-details h2,h4,h5{
+    font-weight: bold;
+}
+#shopp-details .deta-title>p{
+    color:#ACADAD ;
+    font-weight: bold;
+}
+#shopp-details p,h6{
+    font-weight: bold;
+    color: #4C4E53;
+}
+
+#shopp-details .deta-title{
+    width: 690px;
+    background: #FFFDFF;
+    padding-bottom: 1%;
+}
+#shopp-details .deta-cont{
+    width: 690px;
+    background: #FFFDFF;
+}
+#shopp-details .deta-text{
+    width: 640px;
+    padding-top: 20px;
+}
+
+/*--------------点赞分享*/
+#shopp-details .score{
+    width: 250px;
+    height: 100px;
+    background: #ffffff;
+
+}
+#shopp-details .score p{
+    text-align: center;
+    margin-top: 5px;
+ }
+#shopp-details .score a{
+    height: 30px;
+    display: block;
+    text-align: center;
+    margin: 20% 0 1% 0 ;
+}
+#shopp-details .like,.share{
+    text-align: center;
+    width:125px;
+    height: 100px;
+    border: 1px solid #E2E2E2;
+}
+.last{
+    margin-top: 5%;
+    padding-bottom: 5%;
+    color: #BAB3C0;
+}
+.last a{
+    display: block;
+    color: #444444;
+}

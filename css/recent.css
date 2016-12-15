@@ -1,0 +1,27 @@
+.container-fluid{margin-top:0px; padding-bottom: 20px;}
+
+ .tab-content{background: #F7F7F7;}
+ .nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+ .nav{
+    padding-left: 550px;
+    margin-bottom: 0
+   list-style: none;
+}
+ .nav a{
+    padding-left: 550px;
+    margin-bottom: 0
+    list-style: none;
+    color: red;
+}
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.container-fluid .list-unstyled a{float: right;margin: 10px;}
+.container-fluid .list-unstyled li{padding-top: 10px;}
+.container-fluid img {
+    border: 0;
+    width: 100%;
+}

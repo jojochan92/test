@@ -1,0 +1,3037 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>试用</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/try-use.css" type="text/css"/>
+    <script type="text/javascript" src="js/try-use.js"></script>
+
+    <!--头部-->
+    <link type="text/css" rel="stylesheet" href="css/headerAndfooter.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("input[type=submit]").hover(function(){
+                $("input[type=search]").show();
+            });
+            $("#login li:nth-child(2)").click(function(){
+                $("#login-form").show();
+            });
+            $("#login-form .closed").click(function(){
+                $("#login-form").hide();
+            });
+        });
+    </script>
+
+
+
+
+</head>
+<body >
+<header class="navbar navbar-default navbar-fixed-top" role="navigation" id="header" style="margin-bottom:0px;"> <!--navbar-fixed-top -->
+    <nav class="container">
+        <aside class="navbar-header">
+            <a href=""><img src="imgs/logonew.png"width="133" height="52"></a>
+            <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"> <!---这个是显示后面面包房的特效--->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </aside>
+        <ul class="nav navbar-nav collapse navbar-collapse navbar-left">
+            <li><a href="index.html" >首页</a></li>
+            <li><a href="coolplay.html">酷玩</a></li>
+            <li><a href="shopp.html">导购</a></li>
+            <li><a href="try-use.html"style="color: red; font-weight: bold; font-size: 16px;">试用</a></li>
+            <li><a href="recent.html">报告</a></li>
+        </ul>
+        <ul id="login" class="nav navbar-nav navbar-right">
+            <li><a href="#">注册</a></li>
+            <li><a href="#">登录</a></li>
+        </ul>
+        <form action="#" class="navbar-form navbar-nav navbar-right">
+            <div class="form-group">
+                <input type="search" class="form-control" placeholder="请输入你要搜索的内容和" style="display: none;">
+                <input type="submit" class="btn btn-default btn-sm" value="">
+            </div>
+        </form>
+    </nav>
+</header>
+<section id="login-form">
+    <article class="container" >
+        <div class="row">
+            <span class="closed"><img src="imgs/img/closed.png"></span>
+            <form class="col-md-5 col-sm-4  col-md-push-2 form-horizontal" action="www.baidu.com" method="post" role="form">
+                <h3 class="text-center">极果帐号登录</h3>
+
+                <div class="form-group has-success">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" id="inputSuccess" placeholder="请输入用户名">
+                    </div>
+                </div>
+                <div class="form-group has-success">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" id="inputWarning"placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="form-group has-success">
+                    <div class="col-sm-5 col-md-2  btn btn-default" style="border: 0px;">
+                        <input type="checkbox">自动登录
+                    </div>
+                    <div class="col-sm-6 col-sm-offset-1 col-md-offset-4 col-lg-offset-4 text-center">
+                        <input type="submit" class=" btn btn-danger form-control" style="border-radius: 25px;">
+                    </div>
+                </div>
+                <ul class="list-unstyled list-inline">
+                    <li class="col-md-3 col-xs-4">
+                        <a class="btn btn-default" href="www.baidu.com" style="padding-left: 0px; color: #0000CC;">注册新账号</a>
+                    </li>
+                    <li class="col-md-3 col-xm-2">
+                        <a class="btn btn-default" href="" style="color: #0000CC;">忘记密码</a>
+                    </li>
+                    <li class="col-md-2 col-md-offset-2 col-md-push-1">
+                        <a class="btn btn-default" href=""><img src="imgs/img/QQ.png">QQ登录</a>
+                    </li>
+                </ul>
+            </form>
+            <div class="wenxin col-md-3 col-md-push-3 text-center">
+                <img src="imgs/login-wei.png" >
+            </div>
+        </div>
+    </article>
+</section>
+
+<div id="trying" style="margin-top: 50px;margin-bottom: 50px;">
+    <section class="container">
+        <div class="page-header text-center "><!--顶部页面标题-->
+            <h1>免费试用</h1>
+        </div>
+        <!--导航开始-->
+        <div id="section ">
+            <!--页面标题下面的下拉列表-->
+            <ul id="myTab " class="nav nav-tabs " style="padding-left: 11.2%;
+        border-bottom: none"  >
+                <li class="active" id="container-first-li">
+                    <a href="#public" data-toggle="tab">大众试用</a>
+                </li>
+                <li id="container-second-li">
+                    <a href="#experience" data-toggle="tab">体验师专享</a>
+                </li>
+                <!--第二行导航-->
+            </ul>
+            <!--页面标题下面的下拉列表结束-->
+
+        </div>
+    </section>
+    <div id="first-large">
+        <section class="container" >
+            <div id="myTabContent" class="tab-content text-center">
+                <!--大众试用导航开始-->
+                <div class="tab-pane fade in active" id="public" >
+
+                    <!--试用状态-->
+                    <ul id="myTab"  class="nav nav-tabs container" style="padding-left:31.00%;
+        text-align: center;border: none;/*outline: 1px solid red;*/" >
+                        <li class="active" style="width: 166px;border-top: none;" >
+                            <a href="#all" onclick="my()"  id="all-click" data-toggle="tab" >全部</a>
+                        </li>
+                        <li >
+                            <a href="#appling" onclick="my1()" id="appling-click" data-toggle="tab"style="width: 166px;">申请中</a>
+                        </li>
+                        <li >
+                            <a href="#try-useing" onclick="my2()" id="try-useing-click"  data-toggle="tab"style="width: 166px">试用中</a>
+                        </li>
+                        <li >
+                            <a href="#overed" onclick="my3()" id="overed-click"  data-toggle="tab"style="width: 166px">已结束</a >
+                        </li>
+                    </ul>
+                    <!--试用状态结束-->
+
+                    <!--试用-大众试用（全部）页面开始-->
+                    <div class="tab-pane fade in active " id="all">
+
+                        <!--第一排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第二排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第三排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--试用-大众试用（全部）页面结束-->
+
+                    <!--试用-大众试用（申请中）开始-->
+                    <div class="tab-pane fade " id="appling">
+                        <!--第一排产品-->
+                        <div style="clear: both;"></div>
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+
+                                <a href="#" class="thumbnail" >
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="#" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="#" >
+
+                                    2032
+                                </a>
+
+                                <a href="#">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="#" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="#">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第二排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第三排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--试用-大众试用（申请中）结束-->
+
+                    <!--试用-大众试用（试用中）开始-->
+                    <div class="tab-pane fade" id="try-useing">
+                        <!--第一排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot3.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot3.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot3.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot3.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第二排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第三排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--试用-大众试用（试用中）结束-->
+
+                    <!--试用-大众试用（已经结束）页面开始-->
+                    <div class="tab-pane fade " id="overed">
+                        <!--第一排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot4.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot4.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot4.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot4.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第二排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第三排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--试用-大众试用（已经结束）页面结束-->
+
+                </div>
+                <!--大众试用导航结束-->
+
+                <!--体验师专享分页开始-->
+                <div class="tab-pane fade" id="experience">
+
+                    <!--试用状态-->
+                    <ul id="myTab conheader" class="nav nav-tabs container" style="padding-left:30%;
+        text-align: center;border: none;" >
+                        <li class="active" style="width: 166px;border-top: none;" >
+                            <a href="#all2" onclick="my111()" id="all2-click" data-toggle="tab">全部2</a>
+                        </li>
+                        <li >
+                            <a href="#appling2" onclick="my11()" id="appling2-click"  data-toggle="tab"style="width: 166px">申请中2</a>
+                        </li>
+                        <li >
+                            <a href="#try-useing2"  onclick="my22()" id="try-useing2-click"  data-toggle="tab"style="width: 166px">试用中2</a>
+                        </li>
+                        <li >
+                            <a href="#overed2" onclick="my33()" id="overed2-click"  data-toggle="tab"style="width: 166px">已结束2</a>
+                        </li>
+                    </ul>
+                    <!--试用状态结束-->
+
+                    <!--试用-大众试用（全部）页面开始-->
+                    <div class="tab-pane fade in active" id="all2">
+                        <!--第一排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot4.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第二排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第三排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--试用-大众试用（全部）页面结束-->
+
+                    <!--试用-大众试用（申请中）开始-->
+                    <div class="tab-pane fade "  id="appling2">
+                        <!--第一排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第二排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第三排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--试用-大众试用（申请中）结束-->
+
+                    <!--试用-大众试用（试用中）开始-->
+                    <div class="tab-pane fade" id="try-useing2">
+                        <!--第一排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot3.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot3.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot3.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot3.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第二排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第三排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--试用-大众试用（试用中）结束-->
+
+                    <!--试用-大众试用（已经结束）页面开始-->
+                    <div class="tab-pane fade " id="overed2">
+                        <!--第一排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot4.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot4.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot4.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot4.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第二排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                        <!--第三排产品-->
+                        <div class="row text-left" id="product" >
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot2.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    Oserpy小鹰户外运动专业腰包</a>
+                                <br/>
+
+                                <a href="" >
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    查看试用名单
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                            <div class=" col-md-3" >
+
+                                <a href="#" class="thumbnail">
+                                    <img src="imgs/hot1.jpg" alt="通用的占位符缩略图"></a>
+
+                                <a href="" >
+                                    巴慕达The Toaster烤面包机</a>
+                                <br/>
+
+                                <a href="" >
+
+                                    2032
+                                </a>
+
+                                <a href="">
+                                    20台
+                                </a>
+
+                                <br/>
+                                <a href="" style="">
+                                    <span>1932</span>申请</a>
+
+                                <br/>
+                                <a href="">
+                                    报告数量：8
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--试用-大众试用（已经结束）页面结束-->
+
+
+
+                </div>
+                <!--体验师专享分页-->
+
+            </div>
+        </section>
+
+    </div>
+</div>
+<footer id="footer">
+    <article class="container clearfix">
+        <div class="row">
+            <aside class="col-md-2 col-sm-4 col-xs-6">
+                <img src="imgs/code.png" class="img-responsive text-center">
+            </aside>
+            <aside class="col-md-2 col-sm-4 col-xs-6">
+                <img src="imgs/logoImg.jpg" class="img-responsive">
+                <div>全球酷玩试用导购平台酷·新奇·好玩·品质</div>
+                <div>微信添加“JguoJguo”获取我们的服务。</div>
+            </aside>
+            <aside class="col-md-2 col-sm-4 col-xs-6">
+                <div>
+                    <h4>免费试用</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="">试用流程</a></li>
+                        <li><a href="">如何提高成功率</a></li>
+                    </ul>
+                </div>
+
+            </aside>
+            <aside class="col-md-2 col-sm-4 col-xs-6 friendship">
+                <h4>友情链接</h4>
+                <div class="row">
+                    <ul class="list-unstyled">
+                        <li><a href="">智东西</a></li>
+                        <li><a href="">搜狐IT </a></li>
+                        <li><a href="">搜狐数码</a></li>
+                        <li><a href="">凤凰数码</a></li>
+                        <li><a href="">泡泡网</a></li>
+                        <li><a href="">ZUK社区</a></li>
+                        <li><a href="">极客公园</a></li>
+                        <li><a href="">果库</a></li>
+                    </ul>
+                    <ul class="list-unstyled" >
+                        <li><a href="">WEIBUSI</a></li>
+                        <li><a href="">腾讯科技</a></li>
+                        <li><a href="">凤凰科技</a></li>
+                        <li><a href="">PConline</a></li>
+                        <li><a href="">3W咖啡</a></li>
+                        <li><a href="">亿觅emie</a></li>
+                        <li><a href="">易迅易启玩</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <aside class="col-md-2 col-sm-4 col-xs-6">
+                <h4>购买攻略</h4>
+                <ul class="list-unstyled">
+                    <li><a href="">美亚海淘教程</a></li>
+                    <li><a href="">日亚海淘教程</a></li>
+                    <li><a href="">海淘转运攻略</a></li>
+                    <li><a href="">kickstarter 众筹购买攻略</a></li>
+                    <li><a href="">indiegogo 众筹购买攻略</a></li>
+                </ul>
+            </aside>
+            <aside class="col-md-2 col-sm-4 col-xs-6">
+                <h4>厂商合作</h4>
+                <ul class="list-unstyled">
+                    <li><a href="">关于极果</a></li>
+                    <li><a href="mailto:BD@jiguo.com">联系我们:BD@jiguo.com</a></li>
+                    <li><a href="help.html">商务合作</a></li>
+                    <li><a href="mailto:CEO@jiguo.com">CEO邮箱:CEO@jiguo.com</a></li>
+                </ul>
+            </aside>
+        </div>
+    </article>
+    <article><p class="text-center" style="color: white; margin-top: 25px;">&copy; 2016 极果版权所有</p></article>
+</footer>
+
+
+</body>
+</html>

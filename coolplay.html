@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/headerAndfooter.css">
+    <link type="text/css" rel="stylesheet" href="css/coolplay.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("input[type=submit]").hover(function(){
+                $("input[type=search]").show();
+            });
+            $("#login li:nth-child(2)").click(function(){
+                $("#login-form").show();
+            });
+            $("#login-form .closed").click(function(){
+                $("#login-form").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+   <header class="navbar navbar-default navbar-fixed-top" role="navigation" id="header" style="margin-bottom:0px;"> <!--navbar-fixed-top -->
+      <nav class="container">
+          <aside class="navbar-header">
+              <a href=""><img src="imgs/logonew.png"width="133" height="52"></a>
+              <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"> <!---这个是显示后面面包房的特效--->
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+          </aside>
+          <ul class="nav navbar-nav collapse navbar-collapse navbar-left">
+              <li><a href="index.html" >首页</a></li>
+              <li><a href="coolplay.html"style="color: red; font-weight: bold; font-size: 16px;">酷玩</a></li>
+              <li><a href="shopp.html">导购</a></li>
+              <li><a href="try-use.html">试用</a></li>
+              <li><a href="recent.html">报告</a></li>
+          </ul>
+          <ul id="login" class="nav navbar-nav navbar-right">
+              <li style="margin-right: 20px;"><a href="#">注册</a></li>
+              <li style="display: none"><a href="#">登录</a></li>
+          </ul>
+          <form action="#" class="navbar-form navbar-nav navbar-right">
+               <div class="form-group">
+                   <input type="search" class="form-control" placeholder="请输入你要搜索的内容和" style="display: none;">
+                   <input type="submit" class="btn btn-default btn-sm" value="">
+               </div>
+          </form>
+      </nav>
+   </header>
+   <section id="login-form">
+        <article class="container" >
+            <div class="row">
+                <span class="closed"><img src="imgs/img/closed.png"></span>
+                <form class="col-md-5 col-sm-4  col-md-push-2 form-horizontal" action="www.baidu.com" method="post" role="form">
+                     <h3 class="text-center">极果帐号登录</h3>
+
+                    <div class="form-group has-success">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="inputSuccess" placeholder="请输入用户名">
+                        </div>
+                    </div>
+                    <div class="form-group has-success">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="inputWarning"placeholder="请输入密码">
+                        </div>
+                    </div>
+                    <div class="form-group has-success">
+                        <div class="col-sm-5 col-md-2  btn btn-default" style="border: 0px;">
+                         <input type="checkbox">自动登录
+                        </div>
+                        <div class="col-sm-6 col-sm-offset-1 col-md-offset-4 col-lg-offset-4 text-center">
+                            <input type="submit" class=" btn btn-danger form-control" style="border-radius: 25px;">
+                        </div>
+                    </div>
+                    <ul class="list-unstyled list-inline">
+                        <li class="col-md-3 col-xs-4">
+                           <a class="btn btn-default" href="www.baidu.com" style="padding-left: 0px; color: #0000CC;">注册新账号</a>
+                        </li>
+                        <li class="col-md-3 col-xm-2">
+                        <a class="btn btn-default" href="" style="color: #0000CC;">忘记密码</a>
+                        </li>
+                        <li class="col-md-2 col-md-offset-2 col-md-push-1">
+                        <a class="btn btn-default" href=""><img src="imgs/img/QQ.png">QQ登录</a>
+                        </li>
+                    </ul>
+                </form>
+                <div class="wenxin col-md-3 col-md-push-3 text-center">
+                    <img src="imgs/login-wei.png" >
+                </div>
+            </div>
+        </article>
+    </section>
+   <section id="coolplay">
+       <section class="container"><!--页面的大盒子-->
+           <div class="page-header text-center "><!--顶部页面标题-->
+               <h1>发现酷玩
+               </h1>
+           </div>
+           <div id="section ">
+               <!--页面标题下面的下拉列表-->
+               <ul id="myTab conheader" class="nav nav-tabs " >
+                   <li class="active" id="container-first-li">
+                       <a href="#news" data-toggle="tab">最新</a>
+                   </li>
+                   <li id="container-second-li"><a href="#hotst" data-toggle="tab">最热</a></li>
+                   <li id="container-third-li"><a href="#classt" data-toggle="tab">品类</a></li>
+               </ul>
+               <!--页面标题下面的下拉列表结束-->
+           </div>
+       </section>
+       <!--最新商品-->
+       <div id="first-large">
+           <section class="container">
+               <div id="myTabContent" class="tab-content text-center">
+                   <!--最新商品开始-->
+                   <div class="tab-pane fade in active" id="news">
+                       <!--第一排产品-->
+                       <div class="row text-left" >
+                           <div class=" col-md-3" >
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k5.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>SCIO微型光谱仪</h4></span></a>
+                               <a href=""><span>可以测定食物成分及营养</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k2.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>B&O BeoSound音响</h4></span></a>
+                               <a href=""> <span>支持所有音乐流媒体服务</span></a>
+                               <a href=""><span><p></p>￥512</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k3.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>Mozbli触控吸色笔</h4></span></a>
+                               <a href=""><span>能吸取65000HongKong颜色</span></a>
+                               <a href=""><span><h5>￥暂无</h5></span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k4.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>XPLORER 2 航拍飞行器</h4></span></a>
+                               <a href=""><span>搭载自动避障系统</span></a>
+                               <a href=""><span><p></p>￥433</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+                       </div>
+                       <div class="row text-left">
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k5.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>SCIO微型光谱仪</h4></span>
+                               </a>
+                               <a href=""><span>可以测定食物成分及营养</span>
+                               </a>
+                               <a href=""><span><h5>￥1212</h5></span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k2.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>B&O BeoSound音响</h4></span></a>
+                               <a href=""> <span>支持所有音乐流媒体服务</span></a>
+                               <a href="">  <span><h5>￥512</h5></span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k3.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>Mozbli触控吸色笔</h4></span></a>
+                               <a href=""><span>能吸取65000HongKong颜色</span></a>
+                               <a href=""><span><h5>￥暂无</h5></span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k4.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>XPLORER 2 航拍飞行器</h4></span></a>
+                               <a href=""><span>搭载自动避障系统</span></a>
+                               <a href=""><span><h5>￥433</h5></span></a>
+                           </div>
+                       </div>
+                       <div class="row text-left">
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k5.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>SCIO微型光谱仪</h4></span>
+                               </a>
+                               <a href=""><span>可以测定食物成分及营养</span>
+                               </a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k2.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>B&O BeoSound音响</h4></span></a>
+                               <a href=""> <span>支持所有音乐流媒体服务</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k3.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>Mozbli触控吸色笔</h4></span></a>
+                               <a href=""><span>能吸取65000HongKong颜色</span></a>
+                               <a href=""><span><h5>￥暂无</h5></span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k4.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>XPLORER 2 航拍飞行器</h4></span></a>
+                               <a href=""><span>搭载自动避障系统</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+                       </div>
+                       <div class="row text-left">
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k5.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>SCIO微型光谱仪</h4></span>
+                               </a>
+                               <a href=""><span>可以测定食物成分及营养</span>
+                               </a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k2.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>B&O BeoSound音响</h4></span></a>
+                               <a href=""> <span>支持所有音乐流媒体服务</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k3.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>Mozbli触控吸色笔</h4></span></a>
+                               <a href=""><span>能吸取65000HongKong颜色</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k4.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>XPLORER 2 航拍飞行器</h4></span></a>
+                               <a href=""><span>搭载自动避障系统</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+                       </div>
+                       <div class="row text-left">
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k5.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>SCIO微型光谱仪</h4></span>
+                               </a>
+                               <a href=""><span>可以测定食物成分及营养</span>
+                               </a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k2.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>B&O BeoSound音响</h4></span></a>
+                               <a href=""> <span>支持所有音乐流媒体服务</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k3.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>Mozbli触控吸色笔</h4></span></a>
+                               <a href=""><span>能吸取65000HongKong颜色</span></a>
+                               <a href=""><span><h5>￥暂无</h5></span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k4.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>XPLORER 2 航拍飞行器</h4></span></a>
+                               <a href=""><span>搭载自动避障系统</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+                       </div>
+                   </div>
+                   <!--最新商品分页结束-->
+
+
+                   <!--最热商品分页开始-->
+                   <div class="tab-pane fade" id="hotst">
+                       <div class="row">
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k5.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>SCIO微型光谱仪</h4></span>
+                               </a>
+                               <a href=""><span>可以测定食物成分及营养</span>
+                               </a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3 text-left">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k2.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>B&O BeoSound音响</h4></span></a>
+                               <a href=""> <span>支持所有音乐流媒体服务</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3 text-left">
+                               <a href="#" class="thumbnail"><img src="imgs/k3.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>Mozbli触控吸色笔</h4></span></a>
+                               <a href=""><span>能吸取65000HongKong颜色</span></a>
+                               <a href=""><span><h5>￥暂无</h5></span></a>
+                           </div>
+
+                           <div class=" col-md-3 text-left">
+                               <a href="#" class="thumbnail"><img src="imgs/k4.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>XPLORER 2 航拍飞行器</h4></span></a>
+                               <a href=""><span>搭载自动避障系统</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+                       </div>
+                       <div class="row text-left">
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k5.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>SCIO微型光谱仪</h4></span>
+                               </a>
+                               <a href=""><span>可以测定食物成分及营养</span>
+                               </a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k2.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>B&O BeoSound音响</h4></span></a>
+                               <a href=""> <span>支持所有音乐流媒体服务</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k3.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>Mozbli触控吸色笔</h4></span></a>
+                               <a href=""><span>能吸取65000HongKong颜色</span></a>
+                               <a href=""><span><h5>￥暂无</h5></span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k4.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>XPLORER 2 航拍飞行器</h4></span></a>
+                               <a href=""><span>搭载自动避障系统</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+                       </div>
+                       <div class="row text-left">
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k5.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>SCIO微型光谱仪</h4></span>
+                               </a>
+                               <a href=""><span>可以测定食物成分及营养</span>
+                               </a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail">
+                                   <img src="imgs/k2.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>B&O BeoSound音响</h4></span></a>
+                               <a href=""> <span>支持所有音乐流媒体服务</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k3.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>Mozbli触控吸色笔</h4></span></a>
+                               <a href=""><span>能吸取65000HongKong颜色</span></a>
+                               <a href=""><span><h5>￥暂无</h5></span></a>
+                           </div>
+
+                           <div class=" col-md-3">
+                               <a href="#" class="thumbnail"><img src="imgs/k4.jpg" alt="通用的占位符缩略图"></a>
+                               <a href=""><span><h4>XPLORER 2 航拍飞行器</h4></span></a>
+                               <a href=""><span>搭载自动避障系统</span></a>
+                               <a href=""><span><p></p>￥1212</span></a>
+                               <a href="" ><span><img src="imgs/img/xin.png" alt=""/>&nbsp;3</span></a>
+                               <a href=""><span><img src="imgs/img/reply.png" alt=""/>&nbsp;3</span></a>
+                           </div>
+                       </div>
+
+                   </div>
+                   <!--最热商品分页结束-->
+
+
+                   <!--品类分页开始-->
+                   <div class="tab-pane fade" id="classt">
+
+                       <!--生活life-->
+                       <div id="life">
+                        <span class="text-left" id="hblack">
+                            <div></div>
+                            <div>
+                                <a href="">
+                                    <h3>生活</h3>
+                                </a>
+                            </div>
+                        </span>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_1.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>空气净化器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_2.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>吸尘器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_3.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>扫地机器人（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_4.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>电风扇（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_5.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>净水壶（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_6.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>电饭煲（21）</h4></span></a>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_7.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>咖啡机（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_8.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>原汁机（21）</h4></span></a>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>电视（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>空调（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>洗衣机（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>加湿器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>净水壶（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>热水器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>咖啡机（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>原汁机（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>消毒/洗碗机（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>豆浆机（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>扫地机器人（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>电风扇（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>除湿机（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>干燥机（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>取暖器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>原汁机（21）</h4></span></a>
+                               </div>
+
+                           </div>
+                       </div>
+
+
+                       <!--个人护理 nursing-->
+                       <div id="nursing">
+                        <span class="text-left" id="hblack">
+                            <div></div>
+                            <div>
+                                <a href="">
+                                    <h3>个人护理</h3>
+                                </a>
+                            </div>
+                        </span>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_9.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>电动牙刷</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_10.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>剃须刀</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_11.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>按摩器</h4></span></a>
+                               </div>
+
+                           </div>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>冲牙器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>洁面仪（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>蒸面器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>加湿器（21）</h4></span></a>
+                               </div>
+                           </div>
+                       </div>
+
+                       <!--健康 health-->
+                       <div id="nursing">
+                        <span class="text-left" id="hblack">
+                            <div></div>
+                            <div>
+                                <a href="">
+                                    <h3>健康</h3>
+                                </a>
+                            </div>
+                        </span>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_9.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>电动牙刷</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_10.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>剃须刀</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_11.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>按摩器</h4></span></a>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>冲牙器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>洁面仪（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>蒸面器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>加湿器（21）</h4></span></a>
+                               </div>
+                           </div>
+                       </div>
+
+                       <!--智能穿戴 smart-->
+                       <div id="nursing">
+                        <span class="text-left" id="hblack">
+                            <div></div>
+                            <div>
+                                <a href="">
+                                    <h3>智能穿戴</h3>
+                                </a>
+                            </div>
+                        </span>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_1.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>空气净化器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_2.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>吸尘器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_3.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>扫地机器人（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_4.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>电风扇（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_5.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>净水壶（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_6.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>电饭煲（21）</h4></span></a>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>冲牙器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>洁面仪（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>蒸面器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>加湿器（21）</h4></span></a>
+                               </div>
+                           </div>
+                       </div>
+
+
+                       <!--出行 trip-->
+                       <div id="nursing">
+                        <span class="text-left" id="hblack">
+                            <div></div>
+                            <div>
+                                <a href="">
+                                    <h3>出行</h3>
+                                </a>
+                            </div>
+                        </span>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_9.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>电动牙刷</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_10.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>剃须刀</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_11.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>按摩器</h4></span></a>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>冲牙器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>洁面仪（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>蒸面器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>加湿器（21）</h4></span></a>
+                               </div>
+                           </div>
+                       </div>
+
+                       <!--户外运动 sport-->
+                       <div id="nursing">
+                        <span class="text-left" id="hblack">
+                            <div></div>
+                            <div>
+                                <a href="">
+                                    <h3>户外运动</h3>
+                                </a>
+                            </div>
+                        </span>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_10.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>电动牙刷</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_11.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>剃须刀</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_9.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>按摩器</h4></span></a>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>冲牙器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>洁面仪（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>蒸面器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>加湿器（21）</h4></span></a>
+                               </div>
+                           </div>
+                       </div>
+
+                       <!--摄影 photo-->
+                       <div id="nursing">
+                        <span class="text-left" id="hblack">
+                            <div></div>
+                            <div>
+                                <a href="">
+                                    <h3>摄影</h3>
+                                </a>
+                            </div>
+                        </span>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_2.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>电动牙刷</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_3.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>剃须刀</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_6.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>按摩器</h4></span></a>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>冲牙器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>洁面仪（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>蒸面器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>加湿器（21）</h4></span></a>
+                               </div>
+                           </div>
+                       </div>
+
+                       <!--手机 phone-->
+                       <div id="nursing">
+                        <span class="text-left" id="hblack">
+                            <div></div>
+                            <div>
+                                <a href="">
+                                    <h3>手机</h3>
+                                </a>
+                            </div>
+                        </span>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href="#" class="thumbnail">
+                                       <img src="imgs/cat_2.png" alt="通用的占位符缩略图"></a>
+                                   <a href=""><span><h4>电动牙刷</h4></span></a>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>冲牙器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>洁面仪（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>蒸面器（21）</h4></span></a>
+                               </div>
+                               <div class=" col-md-2">
+                                   <a href=""><span><h4>加湿器（21）</h4></span></a>
+                               </div>
+                           </div>
+                       </div>
+
+
+                   </div>
+                   <!--品类分页结束-->
+               </div>
+           </section>
+
+       </div>
+   </section>
+   <footer id="footer">
+       <article class="container clearfix">
+           <div class="row">
+               <aside class="col-md-2 col-sm-4 col-xs-6">
+                   <img src="imgs/code.png" class="img-responsive text-center">
+               </aside>
+               <aside class="col-md-2 col-sm-4 col-xs-6">
+                   <img src="imgs/logoImg.jpg" class="img-responsive">
+                   <div>全球酷玩试用导购平台酷·新奇·好玩·品质</div>
+                   <div>微信添加“JguoJguo”获取我们的服务。</div>
+               </aside>
+               <aside class="col-md-2 col-sm-4 col-xs-6">
+                   <div>
+                       <h4>免费试用</h4>
+                       <ul class="list-unstyled">
+                           <li><a href="">试用流程</a></li>
+                           <li><a href="">如何提高成功率</a></li>
+                       </ul>
+                   </div>
+
+               </aside>
+               <aside class="col-md-2 col-sm-4 col-xs-6 friendship">
+                   <h4>友情链接</h4>
+                   <div class="row">
+                       <ul class="list-unstyled">
+                           <li><a href="">智东西</a></li>
+                           <li><a href="">搜狐IT </a></li>
+                           <li><a href="">搜狐数码</a></li>
+                           <li><a href="">凤凰数码</a></li>
+                           <li><a href="">泡泡网</a></li>
+                           <li><a href="">ZUK社区</a></li>
+                           <li><a href="">极客公园</a></li>
+                           <li><a href="">果库</a></li>
+                       </ul>
+                       <ul class="list-unstyled" >
+                           <li><a href="">WEIBUSI</a></li>
+                           <li><a href="">腾讯科技</a></li>
+                           <li><a href="">凤凰科技</a></li>
+                           <li><a href="">PConline</a></li>
+                           <li><a href="">3W咖啡</a></li>
+                           <li><a href="">亿觅emie</a></li>
+                           <li><a href="">易迅易启玩</a></li>
+                       </ul>
+                   </div>
+               </aside>
+               <aside class="col-md-2 col-sm-4 col-xs-6">
+                   <h4>购买攻略</h4>
+                   <ul class="list-unstyled">
+                       <li><a href="">美亚海淘教程</a></li>
+                       <li><a href="">日亚海淘教程</a></li>
+                       <li><a href="">海淘转运攻略</a></li>
+                       <li><a href="">kickstarter 众筹购买攻略</a></li>
+                       <li><a href="">indiegogo 众筹购买攻略</a></li>
+                   </ul>
+               </aside>
+               <aside class="col-md-2 col-sm-4 col-xs-6">
+                   <h4>厂商合作</h4>
+                   <ul class="list-unstyled">
+                       <li><a href="">关于极果</a></li>
+                       <li><a href="mailto:BD@jiguo.com">联系我们</a></li>
+                       <li><a href="help.html">商务合作：BD@jiguo.com</a></li>
+                       <li><a href="mailto:CEO@jiguo.com">CEO邮箱：CEO@jiguo.com</a></li>
+                   </ul>
+               </aside>
+           </div>
+       </article>
+       <article><p class="text-center" style="color: white; margin-top: 25px;">&copy; 2016 极果版权所有</p></article>
+   </footer>
+</body>
+</html>
